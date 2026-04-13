@@ -1,0 +1,137 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+    --primary: #10181c;
+    --secondary: #2c3e50;
+    --accent: #2d4577;
+    --light: #f4f6f8;
+    --dark: #222;
+    --font-main: Arial, sans-serif;
+}
+
+/* ================= GLOBAL ================= */
+body {
+    font-family: var(--font-main);
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(to right, #1f2325, #2e2f77);
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* ================= SECTION UMUM ================= */
+section {
+    padding: 40px;
+}
+
+/* ================= TENTANG ================= */
+#tentang {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#tentang img {
+    border-radius: 50%;
+}
+
+/* ================= KEAHLIAN ================= */
+#keahlian ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+#keahlian li {
+    background: var(--primary);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+/* ================= PENGALAMAN ================= */
+#pengalaman ol {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+/* ================= KONTAK ================= */
+form {
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: var(--secondary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}

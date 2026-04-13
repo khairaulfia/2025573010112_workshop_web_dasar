@@ -1,0 +1,91 @@
+/* ================= VARIABLES ================= */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --bg-color: #f4f6f8;
+    --text-color: #333;
+    --font-main: 'Arial', sans-serif;
+}
+
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* ================= HEADER ================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+}
+
+.nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.btn-subscribe {
+    padding: 8px 16px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+.hero img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+/* ================= BODY ================= */
+.container {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+}
+
+.content {
+    width: 70%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar {
+    width: 30%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.footer div {
+    width: 30%;
+}
