@@ -1,0 +1,101 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* ================= FAQ ================= */
+.faq details {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+/* efek focus-within */
+.faq details:focus-within {
+    border-color: #3498db;
+    box-shadow: 0 0 10px #3498db;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    display: block;
+}
+
+/* overlay pakai ::before */
+.img-box::before {
+    content: "Gambar";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* hover */
+.img-box:hover::before {
+    opacity: 1;
+}
+
+/* ================= PROGRESS ================= */
+.progress {
+    position: relative;
+    background: #ddd;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+/* fill pakai ::before */
+.progress::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--progress);
+    background: #2ecc71;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+/* teks di atas */
+.progress {
+    color: black;
+    font-weight: bold;
+}

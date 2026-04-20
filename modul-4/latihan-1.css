@@ -1,0 +1,103 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= LAYOUT GRID ================= */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+/* ================= HEADER ================= */
+.header {
+    grid-area: header;
+    background: #3498db;
+    color: white;
+    padding: 20px;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+/* ================= MAIN ================= */
+.main {
+    grid-area: main;
+    padding: 20px;
+    background: #f4f6f8;
+}
+
+/* ================= CARDS ================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ================= BOTTOM CONTENT ================= */
+.content-bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.table {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.chart {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 200px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content-bottom {
+        grid-template-columns: 1fr;
+    }
+}
