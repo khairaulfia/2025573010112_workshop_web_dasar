@@ -1,0 +1,178 @@
+:root {
+    --primary: #ff4d6d;
+    --bg: #f9f9f9;
+    --white: #fff;
+    --dark: #333;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: var(--bg);
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+}
+
+.menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+#search {
+    padding: 5px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* BUTTON */
+.btn {
+    background: var(--primary);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE */
+.img-box {
+    position: relative;
+}
+
+.img-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.img-box:hover .overlay {
+    opacity: 1;
+}
+
+/* AKSI */
+.aksi {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
+.like {
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+
+.like.active {
+    color: red;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+/* BACK TO TOP */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    border: none;
+}
+
+/* DARK MODE */
+.dark {
+    background: #111;
+    color: white;
+}
+
+.dark .card {
+    background: #222;
+}
+
+.dark .navbar {
+    background: #222;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

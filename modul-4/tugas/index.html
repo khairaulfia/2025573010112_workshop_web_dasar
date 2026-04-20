@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVT Card Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h2>SVT Card Shop</h2>
+
+    <input type="text" id="search" placeholder="Cari photocard...">
+
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#produk">Produk</a>
+    </div>
+
+    <button id="darkModeBtn">🌙</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Photocard Idol Favoritmu</h1>
+    <p>Koleksi photocard Seventeen eksklusif</p>
+    <a href="#produk" class="btn">Lihat Koleksi</a>
+</section>
+
+<!-- PRODUK -->
+<section class="produk" id="produk">
+    <h2>Koleksi Photocard</h2>
+
+    <div class="grid">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="https://pict.sindonews.net/dyn/850/pena/news/2024/09/03/187/1448749/7-fakta-menarik-mingyu-seventeen-idol-multitalenta-yang-dijuluki-raja-kebersihan-wiy.jpg">
+                <div class="overlay">Mingyu</div>
+            </div>
+            <h3 class="nama">Photocard Mingyu</h3>
+            <p>Rp 50.000</p>
+
+            <div class="aksi">
+                <button class="cart">+ Keranjang</button>
+                <button class="like">❤️</button>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="https://s3.cosmopolitan.co.id/articles/9-17004741769zKkF.jpg">
+                <div class="overlay">Wonwoo</div>
+            </div>
+            <h3 class="nama">Photocard Wonwoo</h3>
+            <p>Rp 60.000</p>
+
+            <div class="aksi">
+                <button class="cart">+ Keranjang</button>
+                <button class="like">❤️</button>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/720x0/webp/photo/2022/01/11/296066737.jpg">
+                <div class="overlay">Joshua</div>
+            </div>
+            <h3 class="nama">Photocard Joshua</h3>
+            <p>Rp 70.000</p>
+
+            <div class="aksi">
+                <button class="cart">+ Keranjang</button>
+                <button class="like">❤️</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div>About</div>
+    <div>Produk</div>
+    <div>Contact</div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="topBtn">↑</button>
+
+<!-- SCRIPT -->
+<script>
+const topBtn = document.getElementById("topBtn");
+
+// tombol scroll atas
+window.onscroll = function() {
+    if (document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};
+
+topBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+// dark mode
+document.getElementById("darkModeBtn").onclick = function() {
+    document.body.classList.toggle("dark");
+};
+
+// like button
+document.querySelectorAll(".like").forEach(btn => {
+    btn.onclick = () => btn.classList.toggle("active");
+});
+
+// search
+document.getElementById("search").addEventListener("keyup", function() {
+    let value = this.value.toLowerCase();
+    document.querySelectorAll(".card").forEach(card => {
+        let nama = card.querySelector(".nama").textContent.toLowerCase();
+        card.style.display = nama.includes(value) ? "block" : "none";
+    });
+});
+</script>
+
+</body>
+</html>
