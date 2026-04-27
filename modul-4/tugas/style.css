@@ -4,8 +4,6 @@
     --white: #fff;
     --dark: #333;
 }
-
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -16,8 +14,6 @@ body {
     font-family: Arial;
     background: var(--bg);
 }
-
-/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -27,18 +23,14 @@ body {
     position: sticky;
     top: 0;
 }
-
 .menu a {
     margin: 0 10px;
     text-decoration: none;
     color: var(--dark);
 }
-
 #search {
     padding: 5px;
 }
-
-/* HERO */
 .hero {
     text-align: center;
     padding: 60px 20px;
