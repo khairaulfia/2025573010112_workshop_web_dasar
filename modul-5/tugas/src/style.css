@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.btn {
+  @apply bg-orange-600 hover:bg-orange-900 text-white px-4 py-2 rounded hover:scale-105 transition;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800 p-4 rounded shadow hover:-translate-y-2 transition;
+}
+.card img {
+  @apply w-full h-100 object-cover rounded mb-4;
+}
+
+.section-title {
+  @apply text-2xl font-bold text-center mb-6;
+}
