@@ -1,23 +1,27 @@
-// main.js 
-// main.js
 import "./style.css";
 
-// Dark mode toggle
-const btn = document.getElementById("toggleDark");
-const html = document.documentElement;
+// DARK MODE
+const darkBtn = document.getElementById("toggleDark");
 
-// Cek preferensi tersimpan
 if (localStorage.getItem("theme") === "dark") {
-  html.classList.add("dark");
-  btn.textContent = "light";
+  document.documentElement.classList.add("dark");
+  darkBtn.textContent = "☀️";
 }
 
-btn.addEventListener("click", () => {
-  html.classList.toggle("dark");
-  const isDark = html.classList.contains("dark");
-  btn.textContent = isDark ? "light" : "dark";
+darkBtn.onclick = () => {
+  document.documentElement.classList.toggle("dark");
+
+  const isDark = document.documentElement.classList.contains("dark");
+
   localStorage.setItem("theme", isDark ? "dark" : "light");
-});
- 
-// Hapus semua kode lain di main.js (template default Vite) 
-// Kita akan menulis HTML langsung di index.html
+
+  darkBtn.textContent = isDark ? "☀️" : "🌙";
+};
+
+// MENU MOBILE
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+menuBtn.onclick = () => {
+  navMenu.classList.toggle("hidden");
+};
