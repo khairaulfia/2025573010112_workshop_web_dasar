@@ -1,5 +1,4 @@
 import "./style.css";
-// DARK MODE
 const darkBtn = document.getElementById("darkBtn");
 
 if (localStorage.getItem("theme") === "dark") {
@@ -17,7 +16,6 @@ darkBtn.onclick = () => {
   darkBtn.textContent = isDark ? "☀️" : "🌙";
 };
 
-// NAVBAR MOBILE
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
