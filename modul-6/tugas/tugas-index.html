@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Drama Watchlist</title>
+
+  <link rel="stylesheet" href="tugas-style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    <h1>🎬 K-Drama Watchlist</h1>
+    <p>
+      Catat drama Korea favoritmu sebelum lupa ✨
+    </p>
+  </header>
+
+  <form id="taskForm">
+    <div class="input-area">
+      <input
+        type="text"
+        id="taskInput"
+        placeholder="Tambah drama Korea..."
+      >
+
+      <select id="priorityInput">
+        <option value="rendah">⭐ Rendah</option>
+        <option value="sedang">🔥 Sedang</option>
+        <option value="tinggi">💎 Tinggi</option>
+      </select>
+
+      <button type="submit">
+        Tambah
+      </button>
+    </div>
+
+    <p id="inputError" class="error"></p>
+  </form>
+
+  <div class="filters">
+    <div class="filter-buttons">
+      <button class="filter-button active" data-filter="semua">
+        Semua
+      </button>
+
+      <button class="filter-button" data-filter="aktif">
+        Belum Ditonton
+      </button>
+
+      <button class="filter-button" data-filter="selesai">
+        Selesai
+      </button>
+    </div>
+
+    <p id="remainingCount">
+      0 drama tersisa
+    </p>
+  </div>
+
+  <ul id="taskList"></ul>
+
+  <button id="clearCompleted" class="delete-all">
+    Hapus Semua yang Sudah Ditonton
+  </button>
+</div>
+
+<script src="tugas-script.js"></script>
+</body>
+</html>

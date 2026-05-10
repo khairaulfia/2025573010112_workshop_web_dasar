@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang Belanja</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#e2d6aa;
+      padding:20px;
+    }
+
+    h1{
+      margin-bottom:20px;
+    }
+    .container{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:20px;
+    }
+
+    .produk-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:rgb(29, 92, 27);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 4px 10px rgba(243, 240, 245, 0.1);
+      padding:15px;
+    }
+    .card img{
+      width:100%;
+      border-radius:8px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      margin-bottom:8px;
+    }
+
+    .card p{
+      margin-bottom:10px;
+      color:#dbcaca;
+    }
+
+    button{
+      border:none;
+      padding:8px 12px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+ .btn-cart{
+      background:#a9b5c8;
+      color:rgb(11, 10, 10);
+      width:100%;
+    }
+
+    .keranjang{
+      background:rgb(114, 105, 108);
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(159, 148, 148, 0.1);
+      height:fit-content;
+    }
+     .judul-cart{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:15px;
+    }
+
+    .badge{
+      background:rgb(5, 107, 51);
+      color:rgb(241, 233, 233);
+      padding:4px 8px;
+      border-radius:50%;
+      font-size:12px;
+    }
+     .item-cart{
+      border-bottom:1px solid #f4eeee;
+      padding:10px 0;
+    }
+
+    .item-cart h4{
+      margin-bottom:5px;
+    }
+ .qty{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:8px;
+    }
+
+    .qty button{
+      background:#eae1e1;
+    }
+
+    .hapus{
+      background:rgb(217, 34, 34);
+      color:rgb(239, 229, 229);
+      margin-top:8px;
+    }
+
+    .total{
+      margin-top:20px;
+      font-size:18px;
+      font-weight:bold;
+    }
+.checkout{
+      margin-top:15px;
+      width:100%;
+      background:#04553a;
+      color:white;
+      padding:10px;
+    }
+
+    @media(max-width:768px){
+      .container{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>jewerly store aara</h1>
+
+<div class="container">
+     <div class="produk-grid" id="produk-grid"></div>
+      <div class="keranjang">
+
+    <div class="judul-cart">
+      <h2>🛒 Keranjang</h2>
+      <span class="badge" id="badge">0</span>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="total" id="total">
+      Total: Rp 0
+    </div>
+
+    <button class="checkout" id="checkout">
+      Checkout
+    </button>
+ </div>
+
+</div>
+
+<script src="latihan-2.js"></script>
+
+</body>
+</html>
